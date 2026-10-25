@@ -1,0 +1,77 @@
+TAMİRCİ USTA — WEB SİTESİ KULLANIM NOTLARI
+==========================================
+
+Site düz HTML + CSS + JavaScript'tir. Kurulum, veritabanı veya program gerekmez.
+
+
+1) SİTEYİ AÇMAK
+   index.html dosyasına çift tıklayın. (Google Chrome önerilir.)
+
+
+2) YÖNETİM PANELİ
+   - Sayfanın en altındaki "© 2026 ..." satırında bulunan © işaretine tıklayın.
+     (Ya da adresin sonuna #yonetim yazın.)
+   - Şifreyi değiştirmek için: Panel > Genel > "Panel şifresi", ardından Yayınla.
+     (Şifre bu dosyada yazmaz; site GitHub'da herkese açık olabilir.)
+
+   Sekmeler:
+   - Bölümler : Bölüm ekle, sil, çoğalt, gizle/göster, yukarı/aşağı taşı;
+                yazıları, görselleri ve listeleri düzenle.
+   - Genel    : İşletme adı, telefon, WhatsApp, adres, hizmet bölgeleri, renk.
+   - SEO      : Google başlığı/açıklaması, site adresi, kontrol listesi.
+   - Yayınla  : Değişiklikleri kalıcı hâle getirir.
+
+   Başlıklarda *yıldız* arasına yazdığınız kelimeler renkli görünür.
+   Örnek:  Eski evinize *yeni bir hayat* veriyoruz.
+
+
+3) DEĞİŞİKLİKLERİ KAYDETMEK (YAYINLAMAK)
+   Panelde yaptığınız her şey önce bu tarayıcıda "taslak" olarak saklanır.
+   Kalıcı olması için:
+
+   Chrome / Edge:
+     Yayınla > "Klasörü bağla" > masaüstündeki "tamirci" klasörünü seçin > "Klasöre kaydet".
+     (Klasörü bir kez bağlamanız yeterli.)
+
+   Safari / Firefox:
+     Yayınla > "index.html olarak indir" > inen dosyayı "tamirci" klasöründeki
+     eski index.html'in yerine koyun.
+
+   Her kayıtta bir önceki sürüm _yedek/index-onceki.html olarak saklanır.
+
+
+4) GÖRSELLER
+   - Örnek fotoğraflar internetten (Unsplash) gelir; kendi işlerinizin
+     fotoğraflarını panelden "Yükle" ile ekleyin.
+   - ÖNCESİ görseli boş bırakılırsa, SONRASI görseli eskitilerek gösterilir.
+     En iyi sonuç için gerçek öncesi/sonrası fotoğraflarınızı aynı açıdan çekin.
+   - Klasör bağlıysa yüklenen görseller assets/img/yuklenen/ içine kaydedilir.
+
+
+5) İNTERNETE YÜKLEMEK (HOSTİNG)
+   Şu dosya ve klasörleri hosting'in ana dizinine (public_html vb.) yükleyin:
+     index.html, robots.txt, sitemap.xml (varsa), assets/
+   _yedek klasörünü ve bu metin dosyasını yüklemeniz gerekmez.
+
+   Siteyi yükledikten sonra Panel > SEO > "Site adresi" alanına adresinizi
+   yazıp (ör. https://www.siteniz.com) tekrar yayınlayın; sitemap.xml ve
+   Google bağlantıları bu adresle oluşur.
+
+
+6) GÜVENLİK NOTU
+   Panel şifresi, ziyaretçilerin paneli açmasını engeller. Asıl koruma şudur:
+   site dosyalarını değiştirmek için bilgisayarınızdaki klasöre veya hosting
+   hesabınıza erişim gerekir. Bir ziyaretçi paneli bir şekilde açsa bile
+   sizin sitenizdeki dosyayı değiştiremez.
+
+
+DOSYA YAPISI
+   index.html              Sitenin kendisi (panel her yayında yeniden üretir)
+   robots.txt, sitemap.xml Arama motorları için
+   assets/css/style.css    Site tasarımı
+   assets/css/panel.css    Panel tasarımı
+   assets/js/main.js       Öncesi/sonrası çubuğu, kaydırma efektleri, menü, form
+   assets/js/render.js     Sayfa şablonları
+   assets/js/panel.js      Yönetim paneli
+   assets/js/varsayilan.js Örnek içerik
+   assets/img/             Logo ikonu ve yüklenen görseller
