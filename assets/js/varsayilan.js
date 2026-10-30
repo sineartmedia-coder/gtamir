@@ -9,13 +9,13 @@
   g.TamirciVarsayilan = {
     version: 1,
     settings: {
-      businessName: 'Tamirci Usta',
-      logoText: 'Tamirci',
-      logoAccent: 'Usta',
-      slogan: 'Ev Tadilat & Tamirat',
+      businessName: 'HMK Teknik',
+      logoText: 'HMK',
+      logoAccent: 'TEKNİK',
+      slogan: 'İnşaat, Tadilat & Dekorasyon',
       phone: '0555 555 55 55',
       whatsapp: '905555555555',
-      email: 'info@tamirciusta.com',
+      email: '',
       address: 'Caferağa Mah. Moda Cad. No: 1',
       district: 'Kadıköy',
       city: 'İstanbul',
@@ -25,14 +25,14 @@
       instagram: '',
       facebook: '',
       youtube: '',
-      accent: '#ff6b2c',
-      footerText: 'Mutfak dolabından duşakabine, boya-badanadan komple tadilata kadar evinizin her köşesi için tek adres.',
+      accent: '#FFC20E',
+      footerText: 'Konut ve iş yeri inşaatından anahtar teslim tadilata, iç mekân dekorasyonuna kadar yapınızın her aşaması için tek adres.',
       adminHash: '5111140769146c8dcb8c3bed06c483978a37d9aab20cdf69d167536e01910f66'
     },
     seo: {
-      title: 'İstanbul Tadilat, Mutfak Dolabı, Duşakabin | Tamirci Usta',
-      description: 'İstanbul\'da anahtar teslim ev tadilatı: mutfak dolabı, duşakabin montajı, banyo yenileme, boya badana ve parke. Ücretsiz keşif, net fiyat, yazılı garanti.',
-      keywords: 'ev tadilatı, mutfak dolabı, duşakabin montajı, banyo tadilatı, boya badana, laminat parke, ev tamircisi, istanbul tadilat, kadıköy tadilat',
+      title: 'İstanbul İnşaat, Tadilat ve Dekorasyon | HMK Teknik',
+      description: 'İstanbul\'da inşaat, anahtar teslim tadilat ve dekorasyon: kaba yapıdan ince işçiliğe tek ekip. Ücretsiz keşif, net fiyat, yazılı garanti.',
+      keywords: 'inşaat firması, tadilat, dekorasyon, anahtar teslim tadilat, ev tadilatı, iş yeri tadilatı, kaba inşaat, iç dekorasyon, mutfak dolabı, banyo tadilatı, boya badana, istanbul inşaat, istanbul tadilat, hmk teknik',
       siteUrl: '',
       ogImage: U('1600489000022-c2086d79f9d4'),
       priceRange: '₺₺',
@@ -41,29 +41,37 @@
     sections: [
       {
         id: 'anasayfa', type: 'hero', visible: true, nav: '',
-        eyebrow: 'İstanbul\'da anahtar teslim tadilat',
-        title: 'Eski evinize *yeni bir hayat* veriyoruz.',
-        text: 'Mutfak dolabından duşakabine, boya-badanadan komple tadilata kadar evinizin her köşesini ustalıkla yeniliyoruz. Çubuğu kaydırın, farkı görün.',
-        btn1: 'Ücretsiz Keşif İste', btn1Link: '#iletisim',
+        eyebrow: 'İstanbul\'da inşaat · tadilat · dekorasyon',
+        title: 'Temelden dekorasyona *tek ekip*.',
+        text: 'Konut ve iş yeri inşaatından anahtar teslim tadilata, iç mekân dekorasyonundan küçük onarımlara kadar tüm işi tek elden yürütüyoruz. Çubuğu kaydırın, farkı görün.',
+        btn1: 'Ücretsiz Keşif İste',
+        btn1Link: '#iletisim',
         btn2: 'WhatsApp\'tan Yaz',
         hint: 'Çubuğu sürükleyin',
         slides: [
           { label: 'Mutfak', after: U('1600489000022-c2086d79f9d4'), before: U('1722888799634-c5093906feae'), alt: 'Mutfak dolabı ve tezgâh yenileme' },
           { label: 'Banyo', after: U('1584622650111-993a426fbf0a'), before: U('1764551385451-81fbf705e64c'), alt: 'Banyo yenileme ve duşakabin montajı' },
-          { label: 'Salon', after: U('1600210492486-724fe5c67fb0'), before: U('1760516476528-bfa65002547a'), alt: 'Salon boya ve parke yenileme' }
+          { label: 'Salon', after: U('1600210492486-724fe5c67fb0'), before: U('1760516476528-bfa65002547a'), alt: 'Salon boya, parke ve dekorasyon yenileme' }
         ]
       },
       {
         id: 'hizmet-seridi', type: 'marquee', visible: true, nav: '', tone: 'accent',
         items: [
-          { text: 'Mutfak Dolabı' }, { text: 'Duşakabin' }, { text: 'Boya & Badana' }, { text: 'Laminat Parke' },
-          { text: 'Fayans & Seramik' }, { text: 'Su Tesisatı' }, { text: 'Elektrik' }, { text: 'Alçıpan' }, { text: 'Komple Tadilat' }
+          { text: 'İnşaat' },
+          { text: 'Kaba Yapı' },
+          { text: 'Komple Tadilat' },
+          { text: 'Dekorasyon' },
+          { text: 'Mutfak & Banyo' },
+          { text: 'Boya & Badana' },
+          { text: 'Zemin & Parke' },
+          { text: 'Alçıpan & Asma Tavan' },
+          { text: 'Elektrik & Tesisat' }
         ]
       },
       {
         id: 'rakamlar', type: 'stats', visible: true, nav: '', tone: 'dark',
         items: [
-          { value: '15', suffix: '+', label: 'Yıllık ustalık' },
+          { value: '15', suffix: '+', label: 'Yıllık tecrübe' },
           { value: '1200', suffix: '+', label: 'Tamamlanan proje' },
           { prefix: '%', value: '98', suffix: '', label: 'Memnun müşteri' },
           { value: '2', suffix: ' yıl', label: 'İşçilik garantisi' }
@@ -72,25 +80,26 @@
       {
         id: 'hizmetler', type: 'services', visible: true, nav: 'Hizmetler', tone: 'light',
         eyebrow: 'Hizmetlerimiz',
-        title: 'Evinizin ihtiyacı olan *her iş*, tek ekipten.',
-        text: 'Küçük bir tamirattan anahtar teslim tadilata kadar; ölçü, malzeme ve işçiliği tek elden yönetiyoruz.',
+        title: 'İnşaattan dekorasyona *her iş*, tek ekipten.',
+        text: 'Kaba inşaattan ince işçiliğe, tadilattan dekorasyona; proje, malzeme ve uygulamayı tek elden yönetiyoruz.',
         items: [
+          { title: 'İnşaat & Kaba Yapı', text: 'Konut, villa ve iş yeri inşaatı: temel, betonarme, duvar ve çatı işleri. Projeye uygun, planlı ve denetimli uygulama.', image: U('1504307651254-35680f356dfd') },
+          { title: 'Komple Tadilat', text: 'Daire, ofis ve dükkânlarda anahtar teslim tadilat. Tek muhatap, net takvim, sürprizsiz fiyat.', image: U('1503387762-592deb58ef4e') },
+          { title: 'Dekorasyon', text: 'Renk, malzeme ve aydınlatma seçiminden duvar kaplama ve dekoratif detaylara; mekânınıza yeni bir kimlik.', image: U('1586023492125-27b2c045efd7') },
           { title: 'Mutfak Dolabı', text: 'Ölçüye özel mutfak dolabı, tezgâh ve ankastre montajı. Lake, akrilik ve membran kapak seçenekleri.', image: U('1565538810643-b5bdb714032a') },
-          { title: 'Duşakabin & Banyo', text: 'Duşakabin montajı, banyo dolabı, vitrifiye değişimi ve komple banyo yenileme.', image: U('1600566752355-35792bedcfea') },
-          { title: 'Boya & Badana', text: 'İç cephe boya, saten alçı ve dekoratif duvar uygulamaları; eşyalar korunarak, temiz ve hızlı.', image: U('1562259949-e8e7689d7828') },
-          { title: 'Parke & Zemin', text: 'Laminat parke, vinil ve seramik zemin döşeme; süpürgelik ve eşik detaylarıyla.', image: U('1589939705384-5185137a7f0f') },
-          { title: 'Fayans & Seramik', text: 'Banyo ve mutfak fayans, granit seramik döşeme; su yalıtımı ve derz uygulaması.', image: U('1523413651479-597eb2da0ad6') },
-          { title: 'Su Tesisatı', text: 'Su kaçağı tespiti, tesisat yenileme, batarya, rezervuar ve gider değişimi.', image: U('1607472586893-edb57bdc0e39') },
-          { title: 'Elektrik İşleri', text: 'Priz, anahtar ve aydınlatma montajı; sigorta panosu ve kablo yenileme.', image: U('1621905251189-08b45d6a269e') },
+          { title: 'Banyo & Duşakabin', text: 'Duşakabin montajı, banyo dolabı, vitrifiye değişimi ve komple banyo yenileme.', image: U('1600566752355-35792bedcfea') },
+          { title: 'Boya & Dekoratif Duvar', text: 'İç cephe boya, saten alçı, dekoratif boya ve duvar kâğıdı uygulamaları; eşyalar korunarak, temiz ve hızlı.', image: U('1562259949-e8e7689d7828') },
+          { title: 'Zemin & Seramik', text: 'Laminat parke, vinil, seramik ve fayans döşeme; su yalıtımı, süpürgelik ve eşik detaylarıyla.', image: U('1589939705384-5185137a7f0f') },
           { title: 'Alçıpan & Asma Tavan', text: 'Alçıpan bölme duvar, asma tavan ve gizli LED ışık bandı uygulamaları.', image: U('1581858726788-75bc0f6a952d') },
-          { title: 'Komple Ev Tadilatı', text: 'Projeden teslime anahtar teslim tadilat. Tek muhatap, net takvim, sürprizsiz fiyat.', image: U('1503387762-592deb58ef4e') }
+          { title: 'Elektrik & Tesisat', text: 'Elektrik ve su tesisatı yenileme; aydınlatma, sigorta panosu, batarya ve gider değişimi.', image: U('1621905251189-08b45d6a269e') }
         ]
       },
       {
         id: 'donusum', type: 'morph', visible: true, nav: '',
         eyebrow: 'Kaydırdıkça değişsin',
         title: 'Bir mutfağın *dönüşümü*',
-        after: U('1556911220-bff31c812dba'), before: U('1769745918779-f255f567664c'),
+        after: U('1556911220-bff31c812dba'),
+        before: U('1769745918779-f255f567664c'),
         alt: 'Kadıköy\'de mutfak tadilatı',
         meter: 'yenilendi',
         items: [
@@ -116,13 +125,14 @@
       {
         id: 'surec', type: 'process', visible: true, nav: 'Süreç', tone: 'light',
         eyebrow: 'Nasıl çalışıyoruz?',
-        title: 'Dört adımda *sorunsuz* tadilat.',
-        text: 'İlk telefondan anahtar teslimine kadar her adımda ne olacağını bilirsiniz.',
-        btn: 'Keşif Randevusu Al', btnLink: '#iletisim',
+        title: 'Dört adımda *sorunsuz* proje.',
+        text: 'İlk görüşmeden anahtar teslimine kadar her adımda ne olacağını bilirsiniz.',
+        btn: 'Keşif Randevusu Al',
+        btnLink: '#iletisim',
         items: [
-          { title: 'Ücretsiz keşif', text: 'Adresinize gelir, ölçü alır, ihtiyaçlarınızı dinleriz. Keşif için ücret talep etmeyiz.' },
+          { title: 'Ücretsiz keşif', text: 'Adresinize ya da arsanıza gelir, ölçü alır, ihtiyaçlarınızı dinleriz. Keşif için ücret talep etmeyiz.' },
           { title: 'Net teklif & plan', text: 'Malzeme ve işçiliği kalem kalem gösteren, sonradan sürpriz çıkarmayan bir teklif ve iş takvimi sunarız.' },
-          { title: 'Titiz uygulama', text: 'Eşyalarınızı korur, her gün temiz bırakır, takvime sadık kalırız. İlerlemeyi fotoğrafla paylaşırız.' },
+          { title: 'Titiz uygulama', text: 'Kaba işten ince işçiliğe her aşamada alanı korur, her gün temiz bırakır, takvime sadık kalırız. İlerlemeyi fotoğrafla paylaşırız.' },
           { title: 'Teslim & garanti', text: 'İşi birlikte kontrol eder, işçiliğe 2 yıl yazılı garanti veririz.' }
         ]
       },
@@ -137,20 +147,23 @@
           { icon: 'clock', title: 'Zamanında teslim', text: 'Takvimi baştan netleştirir, söz verdiğimiz günde teslim ederiz.' },
           { icon: 'spark', title: 'Temiz çalışma', text: 'Toz örtüsü, koruma bandı ve iş sonu temizliği her işte standarttır.' },
           { icon: 'shield', title: 'Yazılı garanti', text: 'Tüm işçiliğimiz 2 yıl yazılı garanti altındadır.' },
-          { icon: 'helmet', title: 'Kendi ekibimiz', text: 'Taşeron yok; işinizi deneyimli, sigortalı kendi ustalarımız yapar.' }
+          { icon: 'helmet', title: 'Kendi ekibimiz', text: 'Taşeron yok; inşaattan dekorasyona işinizi deneyimli, sigortalı kendi ustalarımız yapar.' }
         ]
       },
       {
         id: 'hakkimizda', type: 'about', visible: true, nav: 'Hakkımızda', tone: 'white',
         eyebrow: 'Hakkımızda',
         title: 'Ustalık, güven ve *temiz iş*.',
-        text: '2010\'dan bu yana İstanbul\'da yüzlerce eve dokunduk. Küçük bir musluk tamirinden komple daire tadilatına kadar her işe aynı özenle yaklaşıyoruz: önce dinliyor, sonra planlıyor, en son uyguluyoruz.',
+        text: 'HMK Teknik olarak 2010\'dan bu yana İstanbul\'da konut ve iş yerlerinin inşaatını, tadilatını ve dekorasyonunu yapıyoruz. Temelden son kat boyaya kadar her işe aynı özenle yaklaşıyoruz: önce dinliyor, sonra planlıyor, en son uyguluyoruz.',
         image: U('1581141849291-1125c7b692b5'),
-        alt: 'Tamirci Usta ekibinden bir usta çalışırken',
-        badgeValue: '15+', badgeText: 'Yıllık tecrübe',
-        btn: 'Bizi Arayın', btnLink: 'tel',
+        alt: 'HMK Teknik ekibinden bir usta çalışırken',
+        badgeValue: '15+',
+        badgeText: 'Yıllık tecrübe',
+        btn: 'Bizi Arayın',
+        btnLink: 'tel',
         items: [
           { text: 'Faturalı ve sigortalı çalışma' },
+          { text: 'İnşaat, tadilat ve dekorasyonda tek muhatap' },
           { text: 'Malzeme seçiminde ücretsiz danışmanlık' },
           { text: 'Eşyalarınız için koruma ve iş sonu temizlik' },
           { text: 'İşçiliğe 2 yıl yazılı garanti' }
@@ -178,6 +191,7 @@
         cardTitle: 'Sorunuz mu var?',
         cardText: 'Fotoğraf gönderin, size hemen fikir verelim.',
         items: [
+          { q: 'Hangi işleri yapıyorsunuz?', a: 'Konut ve iş yeri inşaatı, anahtar teslim tadilat ve iç mekân dekorasyonu yapıyoruz. Mutfak, banyo, boya, zemin, alçıpan, elektrik ve tesisat gibi tek kalem işleri de üstleniyoruz.' },
           { q: 'Keşif ücretli mi?', a: 'Hayır. İstanbul içinde keşif ve ölçü tamamen ücretsizdir; teklifimizi beğenmezseniz hiçbir ücret ödemezsiniz.' },
           { q: 'Mutfak dolabı kaç günde hazır olur?', a: 'Ölçü alındıktan ve model netleştikten sonra üretim ortalama 10–15 iş günü sürer. Montaj genellikle 1–2 günde tamamlanır.' },
           { q: 'Duşakabin montajı ne kadar sürer?', a: 'Standart bir duşakabin montajı çoğunlukla aynı gün, 2–4 saat içinde tamamlanır.' },
@@ -189,8 +203,8 @@
       {
         id: 'teklif', type: 'cta', visible: true, nav: '',
         ticker: 'Ücretsiz keşif',
-        title: 'Evinizi birlikte *yenileyelim*.',
-        text: 'Bugün arayın, en geç 24 saat içinde ücretsiz keşif için kapınızda olalım.',
+        title: 'Projenizi birlikte *hayata geçirelim*.',
+        text: 'Bugün arayın, en geç 24 saat içinde ücretsiz keşif için yanınızda olalım.',
         btn: 'WhatsApp\'tan Yaz'
       },
       {

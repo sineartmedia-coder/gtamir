@@ -1,5 +1,5 @@
-TAMİRCİ USTA — WEB SİTESİ KULLANIM NOTLARI
-==========================================
+HMK TEKNİK — WEB SİTESİ KULLANIM NOTLARI
+========================================
 
 Site düz HTML + CSS + JavaScript'tir. Kurulum, veritabanı veya program gerekmez.
 
@@ -51,7 +51,7 @@ Site düz HTML + CSS + JavaScript'tir. Kurulum, veritabanı veya program gerekme
 5) İNTERNETE YÜKLEMEK (HOSTİNG)
    Şu dosya ve klasörleri hosting'in ana dizinine (public_html vb.) yükleyin:
      index.html, robots.txt, sitemap.xml (varsa), assets/
-   _yedek klasörünü ve bu metin dosyasını yüklemeniz gerekmez.
+   _yedek ve logo klasörlerini, bu metin dosyasını yüklemeniz gerekmez.
 
    Siteyi yükledikten sonra Panel > SEO > "Site adresi" alanına adresinizi
    yazıp (ör. https://www.siteniz.com) tekrar yayınlayın; sitemap.xml ve
@@ -65,6 +65,19 @@ Site düz HTML + CSS + JavaScript'tir. Kurulum, veritabanı veya program gerekme
    sizin sitenizdeki dosyayı değiştiremez.
 
 
+7) LOGO DOSYALARI (logo/ klasörü)
+   HMK-Teknik-Logo.ai   Adobe Illustrator kaynak dosyası (tüm versiyonlar ayrı çalışma yüzeylerinde)
+   HMK-Teknik-Logo.pdf  Matbaa / tabela için vektör PDF
+   svg/                 Web ve vektör kullanım (yatay logo, amblem; sarı, siyah, beyaz)
+   png/                 Şeffaf zeminli yüksek çözünürlüklü görseller
+
+   Kurumsal renkler:
+     HMK Sarı      #FFC20E   (RGB 255 194 14)
+     HMK Antrasit  #121417   (RGB 18 20 23)
+   Yatay logo koyu zeminde: amblem sarı, "HMK" beyaz, "TEKNİK" sarı.
+   Açık zeminde siyah versiyonu kullanın.
+
+
 DOSYA YAPISI
    index.html              Sitenin kendisi (panel her yayında yeniden üretir)
    robots.txt, sitemap.xml Arama motorları için
@@ -74,4 +87,5 @@ DOSYA YAPISI
    assets/js/render.js     Sayfa şablonları
    assets/js/panel.js      Yönetim paneli
    assets/js/varsayilan.js Örnek içerik
-   assets/img/             Logo ikonu ve yüklenen görseller
+   assets/img/             Site ikonu (favicon) ve yüklenen görseller
+   logo/                   Logo kaynak dosyaları (.ai, .pdf, .svg, .png)

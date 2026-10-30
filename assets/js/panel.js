@@ -183,7 +183,7 @@
     F('priceRange', 'Fiyat seviyesi (₺, ₺₺, ₺₺₺)'),
     F('foundingYear', 'Kuruluş yılı')
   ];
-  var COLORS = ['#ff6b2c', '#f5b301', '#e11d48', '#16a34a', '#0ea5e9', '#2563eb', '#7c3aed', '#121417'];
+  var COLORS = ['#FFC20E', '#ff6b2c', '#e11d48', '#16a34a', '#0ea5e9', '#2563eb', '#7c3aed', '#121417'];
 
   /* ---------- yardımcılar ---------- */
   function clone(o) { return JSON.parse(JSON.stringify(o)); }

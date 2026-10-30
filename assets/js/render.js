@@ -59,12 +59,16 @@
     var L = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
     return L > 0.22 ? '#121417' : '#ffffff';
   }
+  // "HMK" + "TEKNİK" bitişik yazılmasın
+  function logoTxt(St) {
+    return esc(St.logoText) + (St.logoText && St.logoAccent ? ' ' : '') + '<b>' + esc(St.logoAccent) + '</b>';
+  }
   function rootStyle(D) {
-    var a = D.settings.accent || '#ff6b2c';
+    var a = D.settings.accent || '#FFC20E';
     return '--accent:' + a + ';--accent-ink:' + accentInk(a);
   }
   function applyRoot(D, el) {
-    var a = D.settings.accent || '#ff6b2c';
+    var a = D.settings.accent || '#FFC20E';
     el.style.setProperty('--accent', a);
     el.style.setProperty('--accent-ink', accentInk(a));
   }
@@ -123,7 +127,8 @@
   function icon(n, cls) {
     return '<svg class="i' + (FILLED[n] ? ' i--f' : '') + (cls ? ' ' + cls : '') + '" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' + (IC[n] || IC.wrench) + '</svg>';
   }
-  var LOGO = '<svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="var(--accent)"/><path d="M10 19.5 20 11l10 8.5V29a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 10 29z" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linejoin="round"/><path d="M17 30.5v-6.2h6v6.2" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linejoin="round"/></svg>';
+  // HMK Teknik amblemi (vektör kaynağı: logo/ klasörü)
+  var LOGO = '<svg class="logo__mark" viewBox="92 84 834 794" aria-hidden="true"><g fill="var(--accent)" fill-rule="evenodd"><path d="M119 645 A396 396 0 0 1 456 193 L456 227 A362 362 0 0 0 153 645Z"/><path d="M691 233 A396 396 0 0 1 901 645 L867 645 A362 362 0 0 0 691 272Z"/><path d="M772 574 L772 486 A14 14 0 0 1 800 486 L800 596 Z"/><path d="M217 645 L293 645 L562 477 L778 645 L844 645 L565 428Z"/><path d="M347 507 L116 621 L116 621 L116 623 L116 624 L116 625 L116 626 L116 627 L116 629 L117 630 L117 631 L117 632 L117 633 L117 635 L117 636 L117 637 L118 638 L118 640 L118 641 L118 642 L118 643 L118 644 L119 645 L153 645 L347 549Z"/><path d="M375 401 L322 375 L239 420 L239 547 L257 538 L257 431 L313 400 L313 510 L331 501 L331 399 L357 412 L357 544 L375 532Z"/><path d="M450 243 L407 265 L334 302 L334 368 L352 376 L352 313 L389 294 L389 524 L450 486Z"/><path d="M540 285 L540 429 L566 413 L604 443 L604 140 L661 182 L661 294 L679 288 L679 173 L586 104 L468 160 L468 225ZM468 235 L468 474 L492 460 L492 255ZM498 455 L532 434 L532 288 L498 261Z"/><path d="M619 455 L715 530 L715 329 L737 345 L737 547 L755 561 L755 336 L697 294 L619 322Z"/><path d="M112 668 L112 736 L112 790 L112 858 L178 858 L178 790 L264 790 L264 858 L330 858 L330 790 L330 736 L330 668 L264 668 L264 736 L178 736 L178 668ZM406 858 L406 750 L465 808 L524 750 L524 858 L590 858 L590 668 L524 668 L465 726 L406 668 L340 668 L340 858ZM666 668 L600 668 L600 858 L666 858 L666 840 L676 829 L719 858 L830 858 L718 783 L822 668 L738 668 L666 748Z"/><rect x="497" y="549" width="46" height="41" rx="5"/><rect x="552" y="549" width="46" height="41" rx="5"/><rect x="497" y="599" width="46" height="41" rx="5"/><rect x="552" y="599" width="46" height="41" rx="5"/></g></svg>';
 
   /* ---------- ortak parçalar ---------- */
   function vis(D) { return D.sections.filter(function (s) { return s.visible !== false; }); }
@@ -332,7 +337,7 @@
       svc.items.forEach(function (x) { h += '<option>' + esc(x.title) + '</option>'; });
       h += '<option>Diğer</option></select></label>';
     }
-    h += '<label><span>Kısaca işiniz</span><textarea name="mesaj" rows="4" placeholder="Örn: 3+1 dairede mutfak dolabı ve banyo yenileme"></textarea></label>';
+    h += '<label><span>Kısaca işiniz</span><textarea name="mesaj" rows="4" placeholder="Örn: 3+1 daire komple tadilat ve dekorasyon"></textarea></label>';
     h += '<button class="btn btn--accent btn--lg btn--block" type="submit">' + icon('whatsapp') + 'WhatsApp ile Gönder</button>';
     if (s.formNote) h += '<p class="cform__note">' + esc(s.formNote) + '</p>';
     h += '</form></div>';
@@ -348,7 +353,7 @@
     var St = D.settings, nav = navItems(D), first = vis(D)[0];
     var links = nav.map(function (s) { return '<a href="#' + esc(s.id) + '">' + esc(s.nav) + '</a>'; }).join('');
     var h = '<header class="hdr" id="hdr"><div class="wrap hdr__in">';
-    h += '<a class="logo" href="#' + esc(first ? first.id : '') + '" aria-label="' + esc(St.businessName) + ' ana sayfa">' + LOGO + '<span class="logo__txt">' + esc(St.logoText) + '<b>' + esc(St.logoAccent) + '</b></span></a>';
+    h += '<a class="logo" href="#' + esc(first ? first.id : '') + '" aria-label="' + esc(St.businessName) + ' ana sayfa">' + LOGO + '<span class="logo__txt">' + logoTxt(St) + '</span></a>';
     h += '<nav class="hdr__nav" aria-label="Ana menü">' + links + '</nav>';
     h += '<div class="hdr__act"><a class="btn btn--accent btn--sm hdr__call" href="' + esc(telHref(St)) + '">' + icon('phone') + '<span>' + esc(St.phone) + '</span></a>';
     h += '<button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menüyü aç"><span></span><span></span></button></div></div></header>';
@@ -365,7 +370,7 @@
       .filter(function (x) { return x[1]; })
       .map(function (x) { return '<a href="' + esc(x[1]) + '" target="_blank" rel="noopener" aria-label="' + x[2] + '">' + icon(x[0]) + '</a>'; }).join('');
     var h = '<footer class="ftr"><div class="wrap"><div class="ftr__top">';
-    h += '<div class="ftr__brand"><a class="logo" href="#' + esc((vis(D)[0] || {}).id || '') + '">' + LOGO + '<span class="logo__txt">' + esc(St.logoText) + '<b>' + esc(St.logoAccent) + '</b></span></a><p>' + esc(St.footerText) + '</p>' + (social ? '<div class="social">' + social + '</div>' : '') + '</div>';
+    h += '<div class="ftr__brand"><a class="logo" href="#' + esc((vis(D)[0] || {}).id || '') + '">' + LOGO + '<span class="logo__txt">' + logoTxt(St) + '</span></a><p>' + esc(St.footerText) + '</p>' + (social ? '<div class="social">' + social + '</div>' : '') + '</div>';
     if (svc) h += '<div class="ftr__col"><h3>Hizmetler</h3><ul>' + (svc.items || []).map(function (x) { return '<li><a href="#' + esc(svc.id) + '">' + esc(x.title) + '</a></li>'; }).join('') + '</ul></div>';
     if (nav.length) h += '<div class="ftr__col"><h3>Menü</h3><ul>' + nav.map(function (s) { return '<li><a href="#' + esc(s.id) + '">' + esc(s.nav) + '</a></li>'; }).join('') + '</ul></div>';
     h += '<div class="ftr__col"><h3>İletişim</h3><ul><li><a href="' + esc(telHref(St)) + '">' + esc(St.phone) + '</a></li>';
@@ -374,7 +379,7 @@
     if (St.hours) h += '<li>' + esc(St.hours) + '</li>';
     h += '</ul></div></div>';
     if (St.areas) h += '<p class="ftr__areas"><strong>Hizmet bölgelerimiz:</strong> ' + esc(St.areas) + '</p>';
-    h += '<p class="ftr__big" aria-hidden="true">' + esc(St.logoText) + '<span>' + esc(St.logoAccent) + '</span></p>';
+    h += '<p class="ftr__big" aria-hidden="true">' + esc(St.logoText) + (St.logoText && St.logoAccent ? ' ' : '') + '<span>' + esc(St.logoAccent) + '</span></p>';
     // © işareti gizli panel girişidir
     h += '<div class="ftr__bottom"><p><button type="button" class="ftr__key" data-admin tabindex="-1" aria-hidden="true">©</button> <span data-year>' + year + '</span> ' + esc(St.businessName) + '. Tüm hakları saklıdır.</p>';
     h += '<p>' + esc(St.city) + ' ' + esc(String(St.slogan || '').toLocaleLowerCase('tr-TR')) + '</p></div></div></footer>';
